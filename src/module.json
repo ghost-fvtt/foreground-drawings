@@ -1,0 +1,37 @@
+{
+  "name": "foreground-drawings",
+  "title": "Foreground Drawings",
+  "description": "",
+  "version": "0.0.0",
+  "author": "Johannes Loher",
+  "authors": [
+    {
+      "name": "Johannes Loher",
+      "email": "johannes.loher@fg4f.de",
+      "discord": "ghost#2000",
+      "ko-fi": "ghostfvtt"
+    }
+  ],
+  "minimumCoreVersion": "0.8.9",
+  "compatibleCoreVersion": "0.8.9",
+  "esmodules": ["module/foreground-drawings.js"],
+  "languages": [
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "https://github.com/ghost-fvtt/foreground-drawings",
+  "manifest": "",
+  "download": "https://host/path/to/0.0.0.zip",
+  "license": "",
+  "readme": "",
+  "bugs": "https://github.com/ghost-fvtt/foreground-drawings/issues",
+  "changelog": ""
+}

@@ -1,0 +1,5 @@
+{
+  "foreground-drawings.CONTROLS.DrawingForeground": "Vordergund-Zeichnungs-Ebene",
+  "foreground-drawings.HUD.DrawingBackground": "Hintergrund-Zeichnung",
+  "foreground-drawings.HUD.DrawingForeground": "Vordergrund-Zeichnung"
+}
