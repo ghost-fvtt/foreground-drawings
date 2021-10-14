@@ -21,8 +21,10 @@ sight, or weather effects.
 
 ## Installation
 
-It is not yet possible to install Foreground Drawings. Appropriate instructions
-will be added when it is possible.
+To install and use Foreground Drawing, simply paste the following URL into the
+**Install Module** dialog on the Setup menu of Foundry Virtual Tabletop.
+
+https://github.com/ghost-fvtt/foreground-drawings/releases/latest/download/module.json
 
 ## Usage
 
