@@ -1,7 +1,7 @@
 {
   "name": "foreground-drawings",
   "title": "Foreground Drawings",
-  "description": "",
+  "description": "A module for Foundry Virtual Tabletop that allows users to create drawings in the foreground while keeping the ability to also draw in the background.",
   "version": "0.0.0",
   "author": "Johannes Loher",
   "authors": [
