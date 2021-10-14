@@ -35,5 +35,24 @@
   "bugs": "https://github.com/ghost-fvtt/foreground-drawings/issues",
   "changelog": "https://github.com/ghost-fvtt/foreground-drawings/blob/master/CHANGELOG.md",
   "manifestPlusVersion": "1.2.0",
-  "allowBugReporter": true
+  "allowBugReporter": true,
+  "media": [
+    {
+      "type": "screenshot",
+      "url": "https://raw.githubusercontent.com/ghost-fvtt/foreground-drawings/master/media/foreground-drawings-screenshot.jpg",
+      "caption": "Foreground Drawings in action"
+    },
+    {
+      "type": "cover",
+      "url": "https://raw.githubusercontent.com/ghost-fvtt/foreground-drawings/master/media/foreground-drawings-cover.jpg",
+      "caption": "Foreground Drawings"
+    },
+    {
+      "type": "video",
+      "url": "https://raw.githubusercontent.com/ghost-fvtt/foreground-drawings/master/media/foreground-drawings-showcase.mp4",
+      "loop": true,
+      "thumbnail": "https://raw.githubusercontent.com/ghost-fvtt/foreground-drawings/master/media/foreground-drawings-showcase-thumbnail.jpg",
+      "caption": "Showcase of Foreground Drawings"
+    }
+  ]
 }

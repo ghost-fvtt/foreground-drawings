@@ -33,13 +33,13 @@ clicking the corresponding button in the drawing tools. You can go back to the
 background drawings layer by clicking the button again. It basically works the
 same as working with overhead tiles.
 
-![Foreground drawings layer toggle button](./img/foreground-drawings-layer-toggle-toggle-button.png)
+![Foreground drawings layer toggle button](./media/foreground-drawings-layer-toggle-toggle-button.png)
 
 You can also move drawings from one layer to the other by using the buttons that
 have been added to the left side of the drawing HUD, again, mimicking the
 functionality of overhead tiles.
 
-![Drawing HUD](./img//drawing-hud.png)
+![Drawing HUD](./media/drawing-hud.png)
 
 ## Development
 
