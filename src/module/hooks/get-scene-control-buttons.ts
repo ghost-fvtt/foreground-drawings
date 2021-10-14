@@ -2,6 +2,9 @@
 //
 // SPDX-License-Identifier: MIT
 
+import { packageName } from '../const';
+import { getGame } from '../helpers';
+
 export default function registerForGetSceneControlButtonsHook() {
   Hooks.on('getSceneControlButtons', getSceneControlButtons);
 }
@@ -21,4 +24,18 @@ function getSceneControlButtons(controls: SceneControl[]) {
     active: canvas?.foregroundDrawings?._active ?? false,
     onClick: (toggled: boolean) => canvas?.[toggled ? 'foregroundDrawings' : 'drawings']?.activate(),
   });
+
+  const game = getGame();
+  if (game.settings.get(packageName, 'clearDrawingsOnlyOnActiveLayer')) {
+    const clearTool = drawings.tools.find((tool) => tool.name === 'clear');
+    if (clearTool) {
+      clearTool.onClick = () => {
+        if (canvas?.drawings?._active) {
+          canvas.drawings.deleteAll();
+        } else if (canvas?.foregroundDrawings?._active) {
+          canvas.foregroundDrawings.deleteAll();
+        }
+      };
+    }
+  }
 }

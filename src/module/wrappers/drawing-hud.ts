@@ -3,12 +3,13 @@
 // SPDX-License-Identifier: MIT
 
 import { packageName } from '../const';
+import { libWrapper } from '../shims/libWrapperShim';
 
-export function onClickControl(
-  this: DrawingHUD,
-  wrapped: (event: JQuery.ClickEvent) => unknown,
-  event: JQuery.ClickEvent,
-) {
+export default function registerDrawingHUDWrappers() {
+  libWrapper.register(packageName, 'DrawingHUD.prototype._onClickControl', onClickControl, 'WRAPPER');
+}
+
+function onClickControl(this: DrawingHUD, wrapped: (event: JQuery.ClickEvent) => unknown, event: JQuery.ClickEvent) {
   wrapped(event);
   if (event.isDefaultPrevented()) {
     return;

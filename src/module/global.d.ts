@@ -24,4 +24,10 @@ declare global {
   interface Canvas {
     foregroundDrawings: ForegroundDrawingsLayer | undefined;
   }
+
+  namespace ClientSettings {
+    interface Values {
+      'foreground-drawings.clearDrawingsOnlyOnActiveLayer': boolean;
+    }
+  }
 }

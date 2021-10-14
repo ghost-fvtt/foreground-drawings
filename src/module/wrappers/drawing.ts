@@ -3,8 +3,13 @@
 // SPDX-License-Identifier: MIT
 
 import { packageName } from '../const';
+import { libWrapper } from '../shims/libWrapperShim';
 
-export function onUpdate(
+export default function registerDrawingWrappers() {
+  libWrapper.register(packageName, 'Drawing.prototype._onUpdate', onUpdate, 'WRAPPER');
+}
+
+function onUpdate(
   this: Drawing,
   wrapped: (data: DeepPartial<foundry.data.DrawingData['_source']>) => void,
   data: DeepPartial<foundry.data.DrawingData['_source']>,

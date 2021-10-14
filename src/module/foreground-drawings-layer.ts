@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: MIT
 
 import { packageName } from './const';
+import { deleteAllDrawings } from './delete-all-drawings';
+import { getGame } from './helpers';
 
 export class ForegroundDrawingsLayer extends DrawingsLayer {
   /** @override */
@@ -14,6 +16,13 @@ export class ForegroundDrawingsLayer extends DrawingsLayer {
   }
 
   /** @override */
+  activate() {
+    super.activate();
+    this.refresh();
+    return this;
+  }
+
+  /** @override */
   deactivate() {
     super.deactivate();
     this.refresh();
@@ -21,10 +30,12 @@ export class ForegroundDrawingsLayer extends DrawingsLayer {
   }
 
   /** @override */
-  activate() {
-    super.activate();
-    this.refresh();
-    return this;
+  async deleteAll() {
+    if (getGame().settings.get(packageName, 'clearDrawingsOnlyOnActiveLayer')) {
+      return deleteAllDrawings({ foreground: true });
+    } else {
+      return super.deleteAll();
+    }
   }
 
   /** @override */

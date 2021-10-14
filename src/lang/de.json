@@ -1,4 +1,6 @@
 {
+  "foreground-drawings.CONTROLS.ClearDrawingsOnlyOnActiveLayerSetting": "Nur Zeichnungen der aktiven Ebene löschen",
+  "foreground-drawings.CONTROLS.ClearDrawingsOnlyOnActiveLayerSettingHint": "Ist diese Einstellung aktiv, löscht der \"Zeichnugen Löschen\" Schalter nur die Zeichnungen der aktiven Zeichnungs-Ebene.",
   "foreground-drawings.CONTROLS.DrawingForeground": "Vordergund-Zeichnungs-Ebene",
   "foreground-drawings.HUD.DrawingBackground": "Hintergrund-Zeichnung",
   "foreground-drawings.HUD.DrawingForeground": "Vordergrund-Zeichnung"

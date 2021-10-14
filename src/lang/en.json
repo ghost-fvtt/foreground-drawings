@@ -1,4 +1,6 @@
 {
+  "foreground-drawings.CONTROLS.ClearDrawingsOnlyOnActiveLayerSetting": "Only Clear Drawings of the Active Layer",
+  "foreground-drawings.CONTROLS.ClearDrawingsOnlyOnActiveLayerSettingHint": "If enabled, the \"Clear Drawings\" button clears only the drawings of the active drawings layer.",
   "foreground-drawings.CONTROLS.DrawingForeground": "Foreground Drawings Layer",
   "foreground-drawings.HUD.DrawingBackground": "Background Drawing",
   "foreground-drawings.HUD.DrawingForeground": "Foreground Drawing"
