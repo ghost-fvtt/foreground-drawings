@@ -30,7 +30,7 @@
   "url": "https://github.com/ghost-fvtt/foreground-drawings",
   "manifest": "https://github.com/ghost-fvtt/foreground-drawings/releases/latest/download/module.json",
   "download": "https://github.com/ghost-fvtt/foreground-drawings/releases/download/v0.1.0/module.zip",
-  "license": "https://github.com/ghost-fvtt/foreground-drawings/blob/master/LICENSE",
+  "license": "https://github.com/ghost-fvtt/foreground-drawings/blob/master/LICENSE.md",
   "readme": "https://github.com/ghost-fvtt/foreground-drawings#readme",
   "bugs": "https://github.com/ghost-fvtt/foreground-drawings/issues",
   "changelog": "https://github.com/ghost-fvtt/foreground-drawings/blob/master/CHANGELOG.md",
