@@ -6,25 +6,35 @@ import { packageName } from '../const';
 import { libWrapper } from '../shims/libWrapperShim';
 
 export default function registerDrawingWrappers() {
-  libWrapper.register(packageName, 'Drawing.prototype._onUpdate', onUpdate, 'WRAPPER');
+  const target = 'Drawing.prototype._onUpdate';
+  try {
+    libWrapper.register(packageName, target, onUpdate, 'OVERRIDE');
+  } catch (e) {
+    logger.warn(`Failed to override ${target}, some things might not work correctly:`, e);
+  }
 }
 
-function onUpdate(
-  this: Drawing,
-  wrapped: (data: DeepPartial<foundry.data.DrawingData['_source']>) => void,
-  data: DeepPartial<foundry.data.DrawingData['_source']>,
-) {
-  // Swap the foreground state
-  if (foundry.utils.hasProperty(data, `flags.${packageName}.foreground`)) {
+function onUpdate(this: Drawing, data: DeepPartial<foundry.data.DrawingData['_source']>) {
+  const superOnUpdate = Object.getPrototypeOf(Drawing).prototype._onUpdate.bind(this);
+  const keys = new Set(Object.keys(data));
+  const redraw = ['type', 'text', 'texture', 'fontFamily', 'fontSize', 'textColor'];
+
+  const shouldSwapForegroundState = foundry.utils.hasProperty(data, `flags.${packageName}.foreground`);
+  const shouldFullyRedraw = shouldSwapForegroundState || redraw.some((k) => keys.has(k));
+
+  if (shouldSwapForegroundState) {
     swapLayer.call(this);
     const hud = this.layer.hud;
     if (hud && hud.object === this) {
       hud.clear();
     }
     this.release();
-    this.draw().then(() => wrapped(data));
+  }
+
+  if (shouldFullyRedraw) {
+    this.draw().then(() => superOnUpdate(data));
   } else {
-    wrapped(data);
+    superOnUpdate(data);
   }
 }
 

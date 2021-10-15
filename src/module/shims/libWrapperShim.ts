@@ -12,7 +12,18 @@ interface LibWrapper {
     target: string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     fn: (wrapped: (...args: any[]) => any, ...args: any[]) => any,
-    type: 'WRAPPER' | 'MIXED' | 'OVERRIDE',
+    type: 'WRAPPER' | 'MIXED',
+    options?: {
+      chain?: boolean;
+      perf_mode?: 'NORMAL' | 'FAST' | 'AUTO';
+    },
+  ): void;
+  register(
+    package_id: string,
+    target: string,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    fn: (...args: any[]) => any,
+    type: 'OVERRIDE',
     options?: {
       chain?: boolean;
       perf_mode?: 'NORMAL' | 'FAST' | 'AUTO';
