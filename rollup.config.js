@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: MIT
 
-const typescript = require('@rollup/plugin-typescript');
+const typescript = require('rollup-plugin-typescript2');
 
 module.exports = {
   input: 'src/module/foreground-drawings.ts',
