@@ -27,7 +27,6 @@
     "clean:link": "gulp link --clean",
     "lint": "eslint --ext .ts,.js .",
     "lint:fix": "eslint --ext .ts,.js --fix .",
-    "check-types": "tsc --noEmit",
     "format": "prettier --write \"./**/*.(ts|js|json|yml)\"",
     "postinstall": "husky install",
     "release": "standard-version"
@@ -36,7 +35,6 @@
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
     "@league-of-foundry-developers/foundry-vtt-types": "^0.8.9-7",
-    "@rollup/plugin-typescript": "^8.2.5",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "chalk": "^4.1.2",
@@ -49,6 +47,7 @@
     "lint-staged": "^11.2.3",
     "prettier": "^2.4.1",
     "rollup": "^2.58.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "standard-version": "^9.3.1",
     "stringify-package": "^1.0.1",
     "tslib": "^2.3.1",
