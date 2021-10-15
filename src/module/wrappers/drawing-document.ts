@@ -6,11 +6,11 @@ import { packageName } from '../const';
 import { libWrapper } from '../shims/libWrapperShim';
 
 export default function registerDrawingDocumentWrappers() {
-  const layerTarget = 'DrawingDocument.prototype.layer';
+  const target = 'DrawingDocument.prototype.layer';
   try {
-    libWrapper.register(packageName, layerTarget, getLayer, 'OVERRIDE');
+    libWrapper.register(packageName, target, getLayer, 'OVERRIDE');
   } catch (e) {
-    logger.warn(`Failed to override ${layerTarget}, some things might not work correctly:`, e);
+    logger.warn(`Failed to override ${target}, some things might not work correctly:`, e);
   }
 }
 

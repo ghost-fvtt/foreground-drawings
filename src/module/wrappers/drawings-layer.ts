@@ -12,11 +12,11 @@ export default function registerDrawingsLayerWrappers() {
 
   const game = getGame();
   if (game.settings.get(packageName, 'clearDrawingsOnlyOnActiveLayer')) {
-    const deleteAllTarget = 'DrawingsLayer.prototype.deleteAll';
+    const target = 'DrawingsLayer.prototype.deleteAll';
     try {
-      libWrapper.register(packageName, deleteAllTarget, deleteAll, 'OVERRIDE');
+      libWrapper.register(packageName, target, deleteAll, 'OVERRIDE');
     } catch (e) {
-      logger.warn(`Failed to override ${deleteAllTarget}, some things might not work correctly:`, e);
+      logger.warn(`Failed to override ${target}, some things might not work correctly:`, e);
     }
   }
 }
