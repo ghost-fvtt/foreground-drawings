@@ -7,21 +7,16 @@ import { libWrapper } from '../shims/libWrapperShim';
 
 export default function registerDrawingWrappers() {
   const target = 'Drawing.prototype._onUpdate';
-  try {
-    libWrapper.register(packageName, target, onUpdate, 'OVERRIDE');
-  } catch (e) {
-    logger.warn(`Failed to override ${target}, some things might not work correctly:`, e);
-  }
+  libWrapper.register(packageName, target, onUpdate, 'WRAPPER');
 }
 
-function onUpdate(this: Drawing, data: DeepPartial<foundry.data.DrawingData['_source']>) {
-  const superOnUpdate = Object.getPrototypeOf(Drawing).prototype._onUpdate.bind(this);
-  const keys = new Set(Object.keys(data));
-  const redraw = ['type', 'text', 'texture', 'fontFamily', 'fontSize', 'textColor'];
-
+function onUpdate(
+  this: Drawing,
+  wrapped: (this: Drawing, ...args: Parameters<Drawing['_onUpdate']>) => ReturnType<Drawing['_onUpdate']>,
+  ...args: Parameters<Drawing['_onUpdate']>
+): ReturnType<Drawing['_onUpdate']> {
+  const data = args[0];
   const shouldSwapForegroundState = foundry.utils.hasProperty(data, `flags.${packageName}.foreground`);
-  const shouldFullyRedraw = shouldSwapForegroundState || redraw.some((k) => keys.has(k));
-
   if (shouldSwapForegroundState) {
     swapLayer.call(this);
     const hud = this.layer.hud;
@@ -29,13 +24,10 @@ function onUpdate(this: Drawing, data: DeepPartial<foundry.data.DrawingData['_so
       hud.clear();
     }
     this.release();
+    data.type = data.type ?? this.data.type; // `Drawing#_onUpdate` performs a redraw if `type` changes, so we touch it to force a redraw.
   }
 
-  if (shouldFullyRedraw) {
-    this.draw().then(() => superOnUpdate(data));
-  } else {
-    superOnUpdate(data);
-  }
+  wrapped.call(this, ...args);
 }
 
 function swapLayer(this: Drawing) {
