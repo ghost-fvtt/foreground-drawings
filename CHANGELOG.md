@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/ghost-fvtt/foreground-drawings/compare/v0.1.1...v0.1.2) (2021-10-20)
+
+
+### Features
+
+* wrap `Drawing#_onUpdate` instead of overriding it ([053aa56](https://github.com/ghost-fvtt/foreground-drawings/commit/053aa56dbab3364c5555ea7968af9fe5fb21a368))
+
 ### [0.1.1](https://github.com/ghost-fvtt/foreground-drawings/compare/v0.1.0...v0.1.1) (2021-10-15)
 
 
