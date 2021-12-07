@@ -74,7 +74,7 @@ npm run build
 Alternatively, you can run
 
 ```
-npm run build:watch
+npm run watch
 ```
 
 to watch for changes and automatically build as necessary.
@@ -98,7 +98,7 @@ with the following content:
 Then run
 
 ```
-npm run link-project
+npm run link-package
 ```
 
 On Windows, creating symlinks requires administrator privileges, so
