@@ -20,32 +20,35 @@
     }
   ],
   "scripts": {
-    "build": "gulp build",
-    "build:watch": "gulp watch",
-    "link-project": "gulp link",
-    "clean": "gulp clean",
-    "clean:link": "gulp link --clean",
-    "lint": "eslint --ext .ts,.js .",
-    "lint:fix": "eslint --ext .ts,.js --fix .",
-    "format": "prettier --write \"./**/*.(ts|js|json|yml)\"",
+    "build": "run-s clean:files build:files",
+    "build:files": "rollup -c",
+    "watch": "rollup -c -w",
+    "link-package": "node ./tools/link-package.mjs",
+    "clean": "run-p clean:files clean:link",
+    "clean:files": "rimraf dist",
+    "clean:link": "node ./tools/link-package.mjs --clean",
+    "lint": "eslint --ext .ts,.js,.mjs .",
+    "lint:fix": "eslint --ext .ts,.js,.mjs --fix .",
+    "format": "prettier --write \"./**/*.(ts|js|mjs|json|yml)\"",
     "postinstall": "husky install",
     "release": "standard-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@guanghechen/rollup-plugin-copy": "^1.8.5",
     "@league-of-foundry-developers/foundry-vtt-types": "^0.8.9-7",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
-    "chalk": "^4.1.2",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "fs-extra": "^10.0.0",
-    "gulp": "^4.0.2",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.60.2",
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
@@ -57,7 +60,7 @@
     "yargs": "^17.2.1"
   },
   "lint-staged": {
-    "*.(ts|js)": "eslint --fix",
+    "*.(ts|js|mjs)": "eslint --fix",
     "*.(json|yml)": "prettier --write"
   }
 }
