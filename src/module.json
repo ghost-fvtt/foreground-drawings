@@ -2,7 +2,7 @@
   "name": "foreground-drawings",
   "title": "Foreground Drawings",
   "description": "A module for Foundry Virtual Tabletop that allows users to create drawings in the foreground while keeping the ability to also draw in the background.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "author": "Johannes Loher",
   "authors": [
     {
@@ -29,7 +29,7 @@
   ],
   "url": "https://github.com/ghost-fvtt/foreground-drawings",
   "manifest": "https://github.com/ghost-fvtt/foreground-drawings/releases/latest/download/module.json",
-  "download": "https://github.com/ghost-fvtt/foreground-drawings/releases/download/v0.1.4/module.zip",
+  "download": "https://github.com/ghost-fvtt/foreground-drawings/releases/download/v0.2.0/module.zip",
   "license": "https://github.com/ghost-fvtt/foreground-drawings/blob/master/LICENSE.md",
   "readme": "https://github.com/ghost-fvtt/foreground-drawings#readme",
   "bugs": "https://github.com/ghost-fvtt/foreground-drawings/issues",

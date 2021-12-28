@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/ghost-fvtt/foreground-drawings/compare/v0.1.4...v0.2.0) (2021-12-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* dropped compatibility with foundry 0.8.x
+
+### Features
+
+* compatibility with foundry v9 ([846c220](https://github.com/ghost-fvtt/foreground-drawings/commit/846c2202d7d11f2fc4ec502738d049ff92db7405))
+
 ### [0.1.4](https://github.com/ghost-fvtt/foreground-drawings/compare/v0.1.3...v0.1.4) (2021-12-07)
 
 ### [0.1.3](https://github.com/ghost-fvtt/foreground-drawings/compare/v0.1.2...v0.1.3) (2021-10-28)
