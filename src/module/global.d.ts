@@ -16,7 +16,7 @@ declare global {
   namespace CONFIG {
     namespace Canvas {
       interface Layers {
-        foregroundDrawings: ConstructorOf<ForegroundDrawingsLayer>;
+        foregroundDrawings: CONFIG.Canvas.LayerDefinition<ConstructorOf<ForegroundDrawingsLayer>>;
       }
     }
   }
