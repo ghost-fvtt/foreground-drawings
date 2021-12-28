@@ -30,6 +30,7 @@
     "lint": "eslint --ext .ts,.js,.mjs .",
     "lint:fix": "eslint --ext .ts,.js,.mjs --fix .",
     "format": "prettier --write \"./**/*.(ts|js|mjs|json|yml)\"",
+    "typecheck": "tsc --noEmit",
     "postinstall": "husky install",
     "release": "standard-version"
   },

@@ -13,7 +13,10 @@ export default function registerForInitHook(): void {
 
 function init() {
   logger.info(`Initializing ${packageName}`);
-  CONFIG.Canvas.layers.foregroundDrawings = ForegroundDrawingsLayer;
+  CONFIG.Canvas.layers.foregroundDrawings = {
+    layerClass: ForegroundDrawingsLayer,
+    group: 'interface',
+  };
   registerSettings();
   registerWrappers();
 }

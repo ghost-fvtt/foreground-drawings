@@ -6,6 +6,7 @@ import { packageName } from '../const';
 import { deleteAllDrawings } from '../delete-all-drawings';
 import { getGame } from '../helpers';
 import { libWrapper } from '../shims/libWrapperShim';
+import logger from '../logger';
 
 export default function registerDrawingsLayerWrappers() {
   libWrapper.register(packageName, 'DrawingsLayer.prototype.getDocuments', getDocuments, 'WRAPPER');

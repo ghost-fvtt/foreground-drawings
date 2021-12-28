@@ -4,6 +4,7 @@
 
 import { packageName } from '../const';
 import { libWrapper } from '../shims/libWrapperShim';
+import logger from '../logger';
 
 export default function registerDrawingDocumentWrappers() {
   const target = 'DrawingDocument.prototype.layer';

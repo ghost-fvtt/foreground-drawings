@@ -12,8 +12,8 @@
       "ko-fi": "ghostfvtt"
     }
   ],
-  "minimumCoreVersion": "0.8.9",
-  "compatibleCoreVersion": "0.8.9",
+  "minimumCoreVersion": "9.238",
+  "compatibleCoreVersion": "9",
   "esmodules": ["module/foreground-drawings.js"],
   "languages": [
     {
