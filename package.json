@@ -40,7 +40,7 @@
     "@guanghechen/rollup-plugin-copy": "^1.8.6",
     "@league-of-foundry-developers/foundry-vtt-types": "^9.242.0",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.1",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
