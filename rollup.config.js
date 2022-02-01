@@ -15,6 +15,7 @@ const staticFiles = [
   'lang',
   'LICENSE.md',
   'LICENSES',
+  'media',
   'module.json.license',
   'module.json',
   'README.md',
