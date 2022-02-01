@@ -15,7 +15,7 @@
   "readme": "./README.md",
   "bugs": "https://github.com/ghost-fvtt/foreground-drawings/issues",
   "changelog": "https://github.com/ghost-fvtt/foreground-drawings/blob/master/CHANGELOG.md",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "minimumCoreVersion": "9.238",
   "compatibleCoreVersion": "9",
   "esmodules": ["foreground-drawings.js"],
@@ -32,7 +32,7 @@
     }
   ],
   "manifest": "https://github.com/ghost-fvtt/foreground-drawings/releases/latest/download/module.json",
-  "download": "https://github.com/ghost-fvtt/foreground-drawings/releases/download/v0.2.1/module.zip",
+  "download": "https://github.com/ghost-fvtt/foreground-drawings/releases/download/v0.2.2/module.zip",
   "manifestPlusVersion": "1.2.0",
   "media": [
     {
