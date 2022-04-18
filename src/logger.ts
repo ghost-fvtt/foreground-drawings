@@ -15,12 +15,10 @@ const getLoggingFunction = (type: LogLevel = 'info'): LoggingFunction => {
   return (...data: unknown[]) => log(loggingContext, loggingSeparator, ...data);
 };
 
-const logger = Object.freeze({
+export const logger = Object.freeze({
   debug: getLoggingFunction('debug'),
   info: getLoggingFunction('info'),
   warn: getLoggingFunction('warning'),
   error: getLoggingFunction('error'),
   getLoggingFunction,
 });
-
-export default logger;
