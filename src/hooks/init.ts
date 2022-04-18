@@ -4,10 +4,10 @@
 
 import { packageName } from '../const';
 import { ForegroundDrawingsLayer } from '../foreground-drawings-layer';
-import registerSettings from '../settings';
-import registerWrappers from '../wrappers';
+import { registerMixins } from '../mixins';
+import { registerSettings } from '../settings';
 
-export default function registerForInitHook(): void {
+export function registerForInitHook(): void {
   Hooks.once('init', init);
 }
 
@@ -17,6 +17,6 @@ function init() {
     layerClass: ForegroundDrawingsLayer,
     group: 'interface',
   };
+  registerMixins();
   registerSettings();
-  registerWrappers();
 }

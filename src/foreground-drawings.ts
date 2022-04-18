@@ -2,6 +2,6 @@
 //
 // SPDX-License-Identifier: MIT
 
-import registerForHooks from './hooks';
+import { registerForHooks } from './hooks';
 
 registerForHooks();

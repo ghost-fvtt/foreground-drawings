@@ -5,7 +5,7 @@
 import { packageName } from './const';
 import { getGame } from './helpers';
 
-export default function registerSettings() {
+export function registerSettings() {
   const game = getGame();
   game.settings.register(packageName, 'clearDrawingsOnlyOnActiveLayer', {
     name: 'foreground-drawings.CONTROLS.ClearDrawingsOnlyOnActiveLayerSetting',

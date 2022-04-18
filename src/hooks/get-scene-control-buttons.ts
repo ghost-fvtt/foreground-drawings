@@ -3,17 +3,15 @@
 // SPDX-License-Identifier: MIT
 
 import { packageName } from '../const';
-import { getGame } from '../helpers';
+import { enforce, getGame } from '../helpers';
 
-export default function registerForGetSceneControlButtonsHook() {
+export function registerForGetSceneControlButtonsHook() {
   Hooks.on('getSceneControlButtons', getSceneControlButtons);
 }
 
 function getSceneControlButtons(controls: SceneControl[]) {
   const drawings = controls.find((control) => control.name === 'drawings');
-  if (!drawings) {
-    throw new Error('Could not find drawings scene controlls');
-  }
+  enforce(drawings, 'Could not find drawings scene controls');
 
   const indexOfConfigure = drawings.tools.findIndex((tool) => tool.name === 'configure');
   drawings.tools.splice(indexOfConfigure, 0, {

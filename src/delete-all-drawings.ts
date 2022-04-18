@@ -2,16 +2,14 @@
 //
 // SPDX-License-Identifier: MIT
 
-import { getGame } from './helpers';
+import { enforce, getGame } from './helpers';
 
 export async function deleteAllDrawings(
   { foreground } = { foreground: false },
 ): Promise<DrawingDocument[] | false | null> {
   const type = 'Drawing';
   const game = getGame();
-  if (!game.user?.isGM) {
-    throw new Error(`You do not have permission to delete ${type} objects from the Scene.`);
-  }
+  enforce(game.user?.isGM, `You do not have permission to delete ${type} objects from the Scene.`);
   return Dialog.confirm({
     title: game.i18n.localize('CONTROLS.ClearAll'),
     content: `<p>${game.i18n.format('CONTROLS.ClearAllHint', {

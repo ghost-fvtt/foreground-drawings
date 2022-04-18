@@ -2,11 +2,11 @@
 //
 // SPDX-License-Identifier: MIT
 
-import registerForGetSceneControlButtonsHook from './get-scene-control-buttons';
-import registerForInitHook from './init';
-import registerForRenderDrawingHUDHook from './render-drawing-hud';
+import { registerForGetSceneControlButtonsHook } from './get-scene-control-buttons';
+import { registerForInitHook } from './init';
+import { registerForRenderDrawingHUDHook } from './render-drawing-hud';
 
-export default function registerForHooks() {
+export function registerForHooks() {
   registerForInitHook();
   registerForGetSceneControlButtonsHook();
   registerForRenderDrawingHUDHook();
