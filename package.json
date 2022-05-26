@@ -38,7 +38,7 @@
     "@commitlint/cli": "17.0.1",
     "@commitlint/config-conventional": "17.0.0",
     "@guanghechen/rollup-plugin-copy": "1.9.4",
-    "@league-of-foundry-developers/foundry-vtt-types": "9.268.2",
+    "@league-of-foundry-developers/foundry-vtt-types": "9.269.0",
     "@rollup/plugin-typescript": "8.3.2",
     "@typescript-eslint/eslint-plugin": "5.26.0",
     "@typescript-eslint/parser": "5.26.0",
