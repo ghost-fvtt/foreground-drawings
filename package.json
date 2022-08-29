@@ -35,7 +35,7 @@
     "release": "standard-version"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.1",
+    "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@guanghechen/rollup-plugin-copy": "1.9.8",
     "@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
