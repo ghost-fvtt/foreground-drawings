@@ -37,7 +37,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "@guanghechen/rollup-plugin-copy": "2.1.0",
+    "@guanghechen/rollup-plugin-copy": "2.1.1",
     "@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
     "@rollup/plugin-typescript": "9.0.1",
     "@typescript-eslint/eslint-plugin": "5.40.0",
