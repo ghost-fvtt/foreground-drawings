@@ -4,7 +4,7 @@
 
 import copy from '@guanghechen/rollup-plugin-copy';
 import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 
 import { distDirectory, name, sourceDirectory } from './tools/const.mjs';
 
