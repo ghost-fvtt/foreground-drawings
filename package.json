@@ -37,7 +37,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.7.1",
     "@commitlint/config-conventional": "19.7.1",
-    "@guanghechen/rollup-plugin-copy": "6.0.3",
+    "@guanghechen/rollup-plugin-copy": "6.0.4",
     "@league-of-foundry-developers/foundry-vtt-types": "9.280.1",
     "@rollup/plugin-typescript": "12.1.2",
     "@rollup/plugin-terser": "0.4.4",
